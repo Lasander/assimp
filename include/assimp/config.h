@@ -649,7 +649,7 @@ enum aiComponent
 */
 #define AI_CONFIG_IMPORT_FBX_SEARCH_EMBEDDED_TEXTURES \
 	"IMPORT_FBX_SEARCH_EMBEDDED_TEXTURES"
-	
+
 // ---------------------------------------------------------------------------
 /** @brief  Set the vertex animation keyframe to be imported
  *
@@ -950,14 +950,5 @@ enum aiComponent
 #if (!defined AI_CONFIG_GLOBAL_SCALE_FACTOR_DEFAULT)
 #   define AI_CONFIG_GLOBAL_SCALE_FACTOR_DEFAULT  1.0f
 #endif // !! AI_DEBONE_THRESHOLD
-
-// ---------- All the Build/Compile-time defines ------------
-
-/** @brief Specifies if double precision is supported inside assimp
- *
- * Property type: Bool. Default value: undefined.
- */
-
-#cmakedefine ASSIMP_DOUBLE_PRECISION 1
 
 #endif // !! AI_CONFIG_H_INC
