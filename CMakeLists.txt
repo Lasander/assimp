@@ -447,10 +447,6 @@ IF ( ASSIMP_BUILD_SAMPLES)
   ADD_SUBDIRECTORY( samples/SimpleOpenGL/ )
 ENDIF ( ASSIMP_BUILD_SAMPLES )
 
-IF ( ASSIMP_BUILD_TESTS )
-  ADD_SUBDIRECTORY( test/ )
-ENDIF ( ASSIMP_BUILD_TESTS )
-
 # Generate a pkg-config .pc for the Assimp library.
 CONFIGURE_FILE( "${PROJECT_SOURCE_DIR}/assimp.pc.in" "${PROJECT_BINARY_DIR}/assimp.pc" @ONLY )
 INSTALL( FILES "${PROJECT_BINARY_DIR}/assimp.pc" DESTINATION ${ASSIMP_LIB_INSTALL_DIR}/pkgconfig/ COMPONENT ${LIBASSIMP-DEV_COMPONENT})
@@ -488,7 +484,7 @@ IF(CMAKE_CPACK_COMMAND AND UNIX AND ASSIMP_OPT_BUILD_PACKAGES)
   SET(CPACK_DEBIAN_PACKAGE_DEPENDS  "${CPACK_COMPONENTS_ALL}")
   SET(CPACK_DEBIAN_PACKAGE_SUGGESTS)
   SET(CPACK_DEBIAN_PACKAGE_NAME     "assimp")
-  SET(CPACK_DEBIAN_PACKAGE_REMOVE_SOURCE_FILES contrib/cppunit-1.12.1 contrib/cppunit_note.txt contrib/zlib workspaces test doc obj samples packaging)
+  SET(CPACK_DEBIAN_PACKAGE_REMOVE_SOURCE_FILES contrib/cppunit-1.12.1 contrib/cppunit_note.txt contrib/zlib workspaces doc obj samples packaging)
   SET(CPACK_DEBIAN_PACKAGE_SOURCE_COPY svn export --force)
   SET(CPACK_DEBIAN_CHANGELOG)
   execute_process(COMMAND lsb_release -is
